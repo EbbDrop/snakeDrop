@@ -82,10 +82,10 @@ class Board:
     for cell in snake[:-1]:
       self.set(30, cell)
     if add_head_next:
-      self.set(10, snake[0] + V("up"))
-      self.set(10, snake[0] + V("right"))
-      self.set(10, snake[0] + V("down"))
-      self.set(10, snake[0] + V("left"))
+      self.set(11, snake[0] + V("up"))
+      self.set(11, snake[0] + V("right"))
+      self.set(11, snake[0] + V("down"))
+      self.set(11, snake[0] + V("left"))
   
   def add_hazzards(self, hazzards):
     for hazzard in hazzards:

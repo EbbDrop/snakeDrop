@@ -11,6 +11,8 @@ def avoid_board(board, possible_moves):
 
 def floot_fill_calc(pos, board, visited):
   if board[pos] != 0 or pos in visited:
+    if len(visited) == 0:
+      return -board[pos]
     return 0
   else:
     visited.add(pos)
