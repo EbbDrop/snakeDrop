@@ -25,7 +25,11 @@ def choose_move(data):
     snakes = data["board"]["snakes"]
     for snake in snakes:
       snake["body"] = [V(x) for x in snake["body"]]
-    foods = [V(x) for x in data["board"]["food"]]
+    hazzards = [V(x) for x in data["board"]["hazards"]]
+    foods = []
+    for food in data["board"]["food"]:
+      if V(food) not in hazzards:
+        foods.append(V(food))
     #print(f"All board data this turn: {data}")
 
     board_width = data["board"]["height"]
