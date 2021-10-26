@@ -87,6 +87,10 @@ class Board:
       self.set(10, snake[0] + V("down"))
       self.set(10, snake[0] + V("left"))
   
+  def add_hazzards(self, hazzards):
+    for hazzard in hazzards:
+      self.set(10, hazzard)
+  
   def get(self, *args):
     if len(args) == 1:
       y, x = args[0].y, args[0].x
