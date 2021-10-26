@@ -65,7 +65,7 @@ def end():
     """
     data = request.get_json()
 
-    print(f"\nhttps://play.battlesnake.com/g/{data['game']['id']} END {data['you']['health']}")
+    print(f"\nhttps://play.battlesnake.com/g/{data['game']['id']} END {data['you']['length']}")
     return "gg"
 
 
