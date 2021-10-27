@@ -39,7 +39,7 @@ def choose_move(data):
 
     board = Board(board_width, board_height)
     for snake in snakes:
-      board.add_snake(snake["body"], (snake["id"] != data["you"]["id"] and snake["length"] >= data["you"]["length"]))
+      board.add_snake(snake["body"], head, (snake["id"] != data["you"]["id"] and snake["length"] >= data["you"]["length"]))
     board.add_hazzards(hazzards)
 
     possible_moves = {

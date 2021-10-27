@@ -78,9 +78,10 @@ class Board:
       if self.board[y][x] < s:
         self.board[y][x] = s
   
-  def add_snake(self, snake, add_head_next):
-    for cell in snake[:-1]:
-      self.set(30, cell)
+  def add_snake(self, snake, head, add_head_next):
+    for i, cell in enumerate(reversed(snake)):
+      if head.taxi(cell) <= i:
+        self.set(30, cell)
     if add_head_next:
       self.set(11, snake[0] + V("up"))
       self.set(11, snake[0] + V("right"))
