@@ -80,7 +80,7 @@ class Board:
   
   def add_snake(self, snake, head, add_head_next):
     for i, cell in enumerate(reversed(snake)):
-      if head.taxi(cell) <= i:
+      if head.taxi(cell) <= i + 1: # 1 as a food buffer
         self.set(30, cell)
     if add_head_next:
       self.set(11, snake[0] + V("up"))
