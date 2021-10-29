@@ -26,7 +26,7 @@ def handle_info():
         "apiversion": "1",
         "author": "EbbDrop",
         "color": "#8607b0",
-        "head": "caffeine",
+        "head": "happy",
         "tail": "round-bum",
     }
 
