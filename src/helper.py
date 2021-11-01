@@ -82,8 +82,10 @@ class Board:
     for i, cell in enumerate(reversed(snake)):
       if i == 0:
         continue
-      if head.taxi(cell) <= i + 1: # 1 as a food buffer
-        self.set(30, cell)
+      if head.taxi(cell) <= i:
+        self.set(9999999999, cell)
+      else:
+        self.set(2, cell)
     if add_head_next:
       self.set(11, snake[0] + V("up"))
       self.set(11, snake[0] + V("right"))
@@ -92,7 +94,7 @@ class Board:
   
   def add_hazzards(self, hazzards):
     for hazzard in hazzards:
-      self.set(10, hazzard)
+      self.set(5, hazzard)
   
   def get(self, *args):
     if len(args) == 1:

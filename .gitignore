@@ -3,3 +3,6 @@
 .cmd
 .idea
 .vscode
+bin/
+lib/
+pyvenv.cfg
